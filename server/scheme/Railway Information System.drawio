@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" modified="2023-04-22T14:58:24.811Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0 (Edition Yx 05)" etag="k-kuMavKWtJaZNvvIPCF" version="21.2.1" type="device">
+  <diagram name="Страница 1" id="Jo_hSg6AI6LK5x6mnP7V">
+    <mxGraphModel dx="875" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ojlx5eYloQ1lB_-5Qk6a-1" target="Ojlx5eYloQ1lB_-5Qk6a-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;user&lt;/b&gt;&lt;br&gt;id&lt;br&gt;email&lt;br&gt;password&lt;br&gt;role&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-2" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;train&lt;/b&gt;&lt;br&gt;id&lt;br&gt;type&lt;br&gt;speed&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="120" width="120" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ojlx5eYloQ1lB_-5Qk6a-3" target="Ojlx5eYloQ1lB_-5Qk6a-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ojlx5eYloQ1lB_-5Qk6a-3" target="Ojlx5eYloQ1lB_-5Qk6a-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;route&lt;/b&gt;&lt;br&gt;id&lt;br&gt;to&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;from&lt;br&gt;price&lt;br&gt;time_id&lt;br&gt;train_id&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="120" width="140" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ojlx5eYloQ1lB_-5Qk6a-12" target="Ojlx5eYloQ1lB_-5Qk6a-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-12" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;store&lt;br&gt;&lt;/b&gt;id&lt;br&gt;user_id&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="120" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Ojlx5eYloQ1lB_-5Qk6a-13" target="Ojlx5eYloQ1lB_-5Qk6a-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-13" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;store_route&lt;/b&gt;&lt;br&gt;route_id&lt;br&gt;store_id&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="120" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ojlx5eYloQ1lB_-5Qk6a-21" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;time&lt;/b&gt;&lt;br&gt;to&lt;br&gt;from&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="505" y="350" width="170" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
