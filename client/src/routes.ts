@@ -1,13 +1,16 @@
-import Auth from "./pages/Auth";
+import Login from "./pages/Login";
 import Main from "./pages/Main";
-import { AUTH_ROUTE, MAIN_ROUTE } from "./utils/consts";
-
-export const authRoutes = [];
+import Registration from "./pages/Registration";
+import { LOGIN_ROUTE, MAIN_ROUTE, REGISTRATION_ROUTE } from "./utils/consts";
 
 export const publicRoutes = [
     {
-        path: AUTH_ROUTE,
-        Component: Auth,
+        path: LOGIN_ROUTE,
+        Component: Login,
+    },
+    {
+        path: REGISTRATION_ROUTE,
+        Component: Registration,
     },
     {
         path: MAIN_ROUTE,
