@@ -1,11 +1,22 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { MAIN_ROUTE } from "../utils/consts";
-import { publicRoutes } from "../routes";
+import { adminRoutes, authRoutes, publicRoutes } from "../routes";
+import { Context } from "..";
 
 const AppRouter: FC = () => {
+    const { user } = useContext(Context);
+
     return (
         <Routes>
+            {user.isAuth &&
+                authRoutes.map(({ path, Component }) => (
+                    <Route key={path} path={path} element={<Component />} />
+                ))}
+            {user.isAdmin &&
+                adminRoutes.map(({ path, Component }) => (
+                    <Route key={path} path={path} element={<Component />} />
+                ))}
             {publicRoutes.map(({ path, Component }) => (
                 <Route key={path} path={path} element={<Component />} />
             ))}
