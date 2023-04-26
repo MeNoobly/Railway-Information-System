@@ -6,7 +6,7 @@ const Registration: FC = () => {
         <>
             <Container>
                 <Form className="mt-4">
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3">
                         <Form.Label>Логин</Form.Label>
                         <Form.Control
                             type="email"
@@ -14,7 +14,7 @@ const Registration: FC = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3">
                         <Form.Label>Пароль</Form.Label>
                         <Form.Control
                             type="password"
@@ -22,10 +22,7 @@ const Registration: FC = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group
-                        className="mb-3"
-                        controlId="formBasicPasswordConfirm"
-                    >
+                    <Form.Group className="mb-3">
                         <Form.Label>Подтверждение пароля</Form.Label>
                         <Form.Control
                             type="password"

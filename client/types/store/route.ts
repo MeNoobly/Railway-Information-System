@@ -1,4 +1,5 @@
 interface ITrainRoutePrice {
+    id: number;
     typeOfTrip: string;
     price: number;
 }
@@ -9,6 +10,7 @@ interface ITrain {
 }
 
 export interface ITrainRoute {
+    id: number;
     dateOfTrip: string;
     exitTime: string;
     comingTime: string;

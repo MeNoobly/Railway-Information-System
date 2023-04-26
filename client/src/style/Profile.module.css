@@ -1,0 +1,11 @@
+.ProfileImg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+}
+
+.ProfileLogin {
+    text-align: center;
+    font-size: 35px;
+}

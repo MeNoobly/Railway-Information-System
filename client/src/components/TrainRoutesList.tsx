@@ -1,14 +1,12 @@
-import React, { FC, useContext } from "react";
-import { Context } from "..";
+import React, { FC } from "react";
 import TrainRoutesItem from "./TrainRoutesItem";
+import { ITrainRoutesListProps } from "../../types/props/train";
 
-const TrainRoutesList: FC = () => {
-    const { routes } = useContext(Context);
-
+const TrainRoutesList: FC<ITrainRoutesListProps> = ({ routes, isMain }) => {
     return (
         <div>
-            {routes.routes.map((item) => (
-                <TrainRoutesItem route={item} />
+            {routes.map((item) => (
+                <TrainRoutesItem route={item} key={item.id} isMain={isMain} />
             ))}
         </div>
     );

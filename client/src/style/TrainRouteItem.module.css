@@ -1,0 +1,60 @@
+.TrainNumber {
+    display: inline-block;
+    background-color: rgb(192, 192, 192);
+    border-radius: 10px;
+    padding: 2px 5px 3px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.TrainTime {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.TrainTimeExit {
+    margin-top: 28px;
+}
+
+.Place {
+    font-size: 14px;
+}
+
+.TravelTimeAndType {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.TimeTypeAndFavourite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TrainType {
+    color: #0073ff;
+}
+
+.Price {
+    margin-top: 15px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.PriceItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.PriceItem:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+
+.ButtonGroups {
+    padding: 10px;
+    display: flex;
+    max-width: 350px;
+    justify-content: space-between;
+}
