@@ -1,9 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, useContext, useState } from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IRegistrationFields } from "../../types/rhf/registration";
+import { observer } from "mobx-react-lite";
+import { Context } from "..";
+import { useNavigate } from "react-router-dom";
 
-const Registration: FC = () => {
+const Registration: FC = observer(() => {
     const {
         register,
         watch,
@@ -15,6 +18,11 @@ const Registration: FC = () => {
     const onSumbit: SubmitHandler<IRegistrationFields> = (data) => {
         reset();
     };
+
+    const { user } = useContext(Context);
+    const [login, setLogin] = useState("");
+    const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     return (
         <>
@@ -89,6 +97,6 @@ const Registration: FC = () => {
             </Container>
         </>
     );
-};
+});
 
 export default Registration;
