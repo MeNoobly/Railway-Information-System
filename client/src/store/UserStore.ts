@@ -1,9 +1,9 @@
 import { makeAutoObservable } from "mobx";
 
 export default class UserStore {
-    private _isAuth = true;
-    private _isAdmin = true;
-    private _login = "login";
+    private _isAuth = false;
+    private _isAdmin = false;
+    private _login = "";
 
     constructor() {
         makeAutoObservable(this);

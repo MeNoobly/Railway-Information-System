@@ -1,28 +1,38 @@
-import React, { FC, useContext, useState } from "react";
+import React, { FC } from "react";
 import { Container, Button, Form } from "react-bootstrap";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { IRegistrationFields } from "../../types/rhf/registration";
 import { observer } from "mobx-react-lite";
-import { Context } from "..";
 import { useNavigate } from "react-router-dom";
+import { registration } from "../http/userAPI";
+import { LOGIN_ROUTE } from "../utils/consts";
 
 const Registration: FC = observer(() => {
+    const navigate = useNavigate();
+
     const {
         register,
         watch,
         handleSubmit,
         formState: { errors },
+        getValues,
         reset,
     } = useForm<IRegistrationFields>({ mode: "onChange" });
 
-    const onSumbit: SubmitHandler<IRegistrationFields> = (data) => {
-        reset();
+    const registrationHandler = async () => {
+        try {
+            const values = getValues();
+            const data = await registration(values.login, values.password);
+            navigate(LOGIN_ROUTE);
+        } catch (error: Error | unknown) {
+            alert(error);
+        }
     };
 
-    const { user } = useContext(Context);
-    const [login, setLogin] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
+    const onSumbit: SubmitHandler<IRegistrationFields> = (data) => {
+        registrationHandler();
+        reset();
+    };
 
     return (
         <>
@@ -43,7 +53,7 @@ const Registration: FC = observer(() => {
                         />
                     </Form.Group>
                     {errors.login && (
-                        <div style={{ color: "red" }} className="mb-3">
+                        <div className="mb-3 text-danger">
                             {errors.login.message}
                         </div>
                     )}
@@ -62,7 +72,7 @@ const Registration: FC = observer(() => {
                         />
                     </Form.Group>
                     {errors.password && (
-                        <div style={{ color: "red" }} className="mb-3">
+                        <div className="mb-3 text-danger">
                             {errors.password.message}
                         </div>
                     )}
@@ -86,7 +96,7 @@ const Registration: FC = observer(() => {
                         />
                     </Form.Group>
                     {errors.repeatPassword && (
-                        <div style={{ color: "red" }} className="mb-3 mt-2">
+                        <div className="mb-3 mt-2 text-danger">
                             {errors.repeatPassword.message}
                         </div>
                     )}

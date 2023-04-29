@@ -1,18 +1,42 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ILoginFields } from "../../types/rhf/login";
+import { useNavigate } from "react-router-dom";
+import { login } from "../http/userAPI";
+import { MAIN_ROUTE } from "../utils/consts";
+import { Context } from "..";
 
 const Login: FC = () => {
+    const navigate = useNavigate();
+    const { user } = useContext(Context);
+
     const {
         register,
         handleSubmit,
         formState: { errors },
+        getValues,
         reset,
+        setError,
     } = useForm<ILoginFields>({ mode: "onChange" });
 
+    const loginHandler = async () => {
+        try {
+            const values = getValues();
+            const data = await login(values.login, values.password);
+            user.isAuth = true;
+            reset();
+            navigate(MAIN_ROUTE);
+        } catch (error: Error | unknown) {
+            setError("password", {
+                type: "custom",
+                message: "Invalid password entered",
+            });
+        }
+    };
+
     const onSumbit: SubmitHandler<ILoginFields> = (data) => {
-        reset();
+        loginHandler();
     };
 
     return (
